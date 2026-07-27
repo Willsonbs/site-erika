@@ -1,0 +1,231 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* Paleta de cores da Dra. Erika */
+  --primary: #0b0c2b; /* Azul escuro profundo */
+  --primary-foreground: #ffffff; /* Branco */
+  --secondary: #9f895d; /* Dourado quente */
+  --secondary-foreground: #ffffff; /* Branco */
+  --accent: #a08a5d; /* Dourado mais claro */
+  --accent-foreground: #ffffff; /* Branco */
+  
+  --background: #ffffff; /* Branco */
+  --foreground: #0b0c2b; /* Azul escuro */
+  --card: #ffffff; /* Branco */
+  --card-foreground: #0b0c2b; /* Azul escuro */
+  --popover: #ffffff; /* Branco */
+  --popover-foreground: #0b0c2b; /* Azul escuro */
+  --secondary-light: #f5f3f0; /* Bege muito claro */
+  --muted: #e8e5e0; /* Bege claro */
+  --muted-foreground: #6b6b6b; /* Cinza médio */
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: #ffffff;
+  --border: #e8e5e0; /* Bege claro */
+  --input: #f5f3f0; /* Bege muito claro */
+  --ring: #9f895d; /* Dourado */
+  --sidebar: #ffffff;
+  --sidebar-foreground: #0b0c2b;
+  --sidebar-primary: #0b0c2b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #9f895d;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #e8e5e0;
+  --sidebar-ring: #9f895d;
+  --chart-1: #0b0c2b;
+  --chart-2: #9f895d;
+  --chart-3: #a08a5d;
+  --chart-4: #6b6b6b;
+  --chart-5: #d4c5b9;
+  --radius: 0.65rem;
+}
+
+.dark {
+  --primary: #0b0c2b;
+  --primary-foreground: #ffffff;
+  --secondary: #9f895d;
+  --secondary-foreground: #ffffff;
+  --accent: #a08a5d;
+  --accent-foreground: #ffffff;
+  --background: #0f1117;
+  --foreground: #e8e5e0;
+  --card: #1a1b2e;
+  --card-foreground: #e8e5e0;
+  --popover: #1a1b2e;
+  --popover-foreground: #e8e5e0;
+  --secondary-light: #2a2b3e;
+  --muted: #3a3b4e;
+  --muted-foreground: #a8a8a8;
+  --destructive: oklch(0.704 0.191 22.216);
+  --destructive-foreground: #ffffff;
+  --border: #3a3b4e;
+  --input: #2a2b3e;
+  --ring: #9f895d;
+  --sidebar: #1a1b2e;
+  --sidebar-foreground: #e8e5e0;
+  --sidebar-primary: #0b0c2b;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #9f895d;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #3a3b4e;
+  --sidebar-ring: #9f895d;
+  --chart-1: #e8e5e0;
+  --chart-2: #9f895d;
+  --chart-3: #a08a5d;
+  --chart-4: #a8a8a8;
+  --chart-5: #d4c5b9;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap');
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    @apply font-bold text-foreground;
+  }
+  
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl leading-tight;
+  }
+  
+  h2 {
+    @apply text-3xl md:text-4xl lg:text-5xl leading-tight;
+  }
+  
+  h3 {
+    @apply text-2xl md:text-3xl leading-snug;
+  }
+  
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+  
+  p {
+    @apply text-base md:text-lg leading-relaxed;
+  }
+  
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  /**
+   * Custom container utility that centers content and adds responsive padding.
+   *
+   * This overrides Tailwind's default container behavior to:
+   * - Auto-center content (mx-auto)
+   * - Add responsive horizontal padding
+   * - Set max-width for large screens
+   *
+   * Usage: <div className="container">...</div>
+   *
+   * For custom widths, use max-w-* utilities directly:
+   * <div className="max-w-6xl mx-auto px-4">...</div>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* 16px - mobile padding */
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem; /* 24px - tablet padding */
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem; /* 32px - desktop padding */
+      padding-right: 2rem;
+      max-width: 1280px; /* Standard content width */
+    }
+  }
+  
+  /* Gradiente elegante para seções */
+  .gradient-elegant {
+    @apply bg-gradient-to-br from-secondary/10 to-accent/5;
+  }
+  
+  /* Estilo de botão primário */
+  .btn-primary {
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+  
+  /* Estilo de botão secundário */
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+  }
+  
+  /* Estilo de card elegante */
+  .card-elegant {
+    @apply bg-card text-card-foreground rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+}
