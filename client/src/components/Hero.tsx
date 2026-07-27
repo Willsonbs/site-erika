@@ -69,7 +69,7 @@ export default function Hero() {
             <div className="relative w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl border border-border overflow-hidden">
               <img
                 src="/dra-erika-1.jpg"
-                alt="Dra. Erika Goncalves - Psiquiatra"
+                alt="Dra. Erika Gonçalves - Psiquiatra"
                 className="w-full h-full object-cover object-top"
               />
             </div>

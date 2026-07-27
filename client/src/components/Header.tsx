@@ -29,11 +29,11 @@ export default function Header() {
         <div className="flex items-center gap-3 flex-shrink-0">
           <img
             src="/logo.png"
-            alt="Dra. Erika Goncalves - Logo"
+            alt="Dra. Erika Gonçalves - Logo"
             className="h-14 w-auto"
           />
           <div className="hidden sm:block">
-            <h1 className="text-sm font-bold text-primary leading-tight">Dra. Erika Goncalves</h1>
+            <h1 className="text-sm font-bold text-primary leading-tight">Dra. Erika Gonçalves</h1>
             <p className="text-xs text-muted-foreground">Psiquiatria</p>
           </div>
         </div>
