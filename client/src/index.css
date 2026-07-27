@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -116,8 +117,6 @@
   --chart-4: #a8a8a8;
   --chart-5: #d4c5b9;
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap');
 
 @layer base {
   * {
