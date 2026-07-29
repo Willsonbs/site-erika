@@ -1,4 +1,5 @@
 import { Phone, MapPin, Instagram, MessageCircle } from 'lucide-react';
+import { Link } from 'wouter';
 import { WHATSAPP_URL } from '@/const';
 
 export default function Footer() {
@@ -86,6 +87,16 @@ export default function Footer() {
 
         {/* Divider */}
         <div className="border-t border-white/20 pt-8">
+          {/* Legal Links */}
+          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-sm text-white/80 mb-6">
+            <Link href="/politica-de-privacidade" className="hover:text-white transition-colors">
+              Política de Privacidade
+            </Link>
+            <Link href="/termos-de-servico" className="hover:text-white transition-colors">
+              Termos de Serviço
+            </Link>
+          </div>
+
           {/* Bottom Content */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/80">
             <p>
