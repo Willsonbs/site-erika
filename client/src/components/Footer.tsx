@@ -88,7 +88,7 @@ export default function Footer() {
         {/* Divider */}
         <div className="border-t border-white/20 pt-8">
           {/* Legal Links */}
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-6 text-sm text-white/80 mb-6">
+          <div className="flex flex-col sm:flex-row justify-center sm:justify-end items-center gap-2 sm:gap-6 text-sm text-white/80 mb-6">
             <Link href="/politica-de-privacidade" className="hover:text-white transition-colors">
               Política de Privacidade
             </Link>
