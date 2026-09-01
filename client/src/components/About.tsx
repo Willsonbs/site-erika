@@ -119,16 +119,16 @@ export default function About() {
     <section id="about" className="py-20 bg-background">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Photo, mirrored arch echoes the hero's signature shape */}
+          {/* Left - Photo, same classic arch as the hero's signature shape */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[446px]">
               <div
-                className="absolute -inset-4 -z-10 opacity-50 blur-2xl"
-                style={{ background: 'linear-gradient(135deg, rgba(110,122,88,0.3), rgba(159,137,93,0.25))', borderRadius: '52% 48% 58% 42% / 45% 55% 45% 55%' }}
+                className="absolute -inset-3 -z-10 opacity-50 blur-2xl bg-gradient-to-br from-sage/35 to-secondary/25"
+                style={{ borderRadius: '50% 50% 8px 8px / 40% 40% 8px 8px' }}
               />
               <div
                 className="relative w-full h-[595px] border-4 border-white shadow-xl overflow-hidden"
-                style={{ borderRadius: '52% 48% 58% 42% / 42% 58% 42% 58%' }}
+                style={{ borderRadius: '50% 50% 0 0 / 40% 40% 0 0' }}
               >
                 <img
                   src="/dra-erika-about.jpg"

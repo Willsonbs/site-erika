@@ -40,13 +40,13 @@ export default function Hero() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center justify-center gap-2"
+              className="btn-primary inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
               <MessageCircle size={18} /> Agendar Consulta via WhatsApp
             </a>
             <button
               onClick={() => scrollToSection('about')}
-              className="btn-secondary inline-flex items-center justify-center gap-2"
+              className="btn-secondary inline-flex items-center justify-center gap-2 whitespace-nowrap"
             >
               Conheça a Dra. Erika <ArrowRight size={16} />
             </button>
@@ -62,16 +62,16 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Image — organic arch, the page's signature shape */}
+        {/* Right Image — classic arch, the page's signature shape */}
         <div className="flex justify-center md:justify-end">
           <div className="relative w-full max-w-sm">
             <div
-              className="absolute -inset-4 -z-10 opacity-60 blur-2xl"
-              style={{ background: 'linear-gradient(135deg, rgba(159,137,93,0.35), rgba(110,122,88,0.25))', borderRadius: '48% 52% 42% 58% / 55% 45% 55% 45%' }}
+              className="absolute -inset-3 -z-10 opacity-50 blur-2xl bg-gradient-to-br from-secondary/40 to-sage/25"
+              style={{ borderRadius: '50% 50% 8px 8px / 40% 40% 8px 8px' }}
             />
             <div
               className="relative w-full aspect-[4/5] overflow-hidden border-4 border-white shadow-xl"
-              style={{ borderRadius: '48% 52% 42% 58% / 58% 42% 58% 42%' }}
+              style={{ borderRadius: '50% 50% 0 0 / 40% 40% 0 0' }}
             >
               <img
                 src="/dra-erika-1.jpg"
