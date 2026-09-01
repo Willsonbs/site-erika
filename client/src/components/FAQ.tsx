@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Card } from '@/components/ui/card';
-import { ChevronDown } from 'lucide-react';
+import { ChevronDown, MessageCircle } from 'lucide-react';
 import { WHATSAPP_URL } from '@/const';
 
 export default function FAQ() {
@@ -34,9 +34,10 @@ export default function FAQ() {
   ];
 
   return (
-    <section className="py-20 bg-background">
+    <section id="faq" className="py-20 bg-background">
       <div className="container max-w-3xl">
         <div className="text-center mb-16">
+          <p className="eyebrow justify-center flex">Antes de dar o primeiro passo</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Perguntas Frequentes
           </h2>
@@ -78,20 +79,22 @@ export default function FAQ() {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-12 bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Ainda tem dúvidas?
-          </h3>
-          <p className="text-white/90 mb-6 text-lg">
-            Entre em contato com a Dra. Erika via WhatsApp. Ela ficará feliz em responder todas as suas perguntas.
-          </p>
+        <div className="mt-12 bg-primary rounded-[28px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Ainda tem dúvidas?
+            </h3>
+            <p className="text-white/70 text-lg">
+              Entre em contato com a Dra. Erika via WhatsApp. Ela ficará feliz em responder todas as suas perguntas.
+            </p>
+          </div>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="btn-white inline-flex items-center justify-center gap-2 whitespace-nowrap"
           >
-            💬 Fale Conosco no WhatsApp
+            <MessageCircle size={17} /> Fale Conosco no WhatsApp
           </a>
         </div>
       </div>

@@ -1,5 +1,5 @@
 import { Card } from '@/components/ui/card';
-import { Heart, Brain, Zap, Shield, Wind, Lightbulb } from 'lucide-react';
+import { Heart, Brain, Zap, Shield, Wind, Lightbulb, MessageCircle } from 'lucide-react';
 import { WHATSAPP_URL } from '@/const';
 
 export default function Treatments() {
@@ -40,6 +40,7 @@ export default function Treatments() {
     <section id="treatments" className="py-20 bg-secondary-light">
       <div className="container">
         <div className="text-center mb-16">
+          <p className="eyebrow justify-center flex">Cuidado sob medida</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Tratamentos Especializados
           </h2>
@@ -52,10 +53,10 @@ export default function Treatments() {
           {treatments.map((treatment, index) => {
             const Icon = treatment.icon;
             return (
-              <Card key={index} className="card-elegant border border-border hover:border-secondary transition-all duration-300">
+              <Card key={index} className="card-elegant border border-border hover:border-sage transition-all duration-300">
                 <div className="flex flex-col gap-4">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-secondary/20 to-accent/10 flex items-center justify-center">
-                    <Icon size={24} className="text-secondary" />
+                  <div className="w-12 h-12 rounded-full bg-sage-light flex items-center justify-center">
+                    <Icon size={22} className="text-sage" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold text-primary mb-2">{treatment.title}</h3>
@@ -67,20 +68,22 @@ export default function Treatments() {
           })}
         </div>
 
-        <div className="mt-16 bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Pronto para começar seu tratamento?
-          </h3>
-          <p className="text-white/90 mb-6 text-lg">
-            Agende sua consulta e converse com a Dra. Erika sobre as melhores opções para você.
-          </p>
+        <div className="mt-16 bg-primary rounded-[28px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Pronto para começar seu tratamento?
+            </h3>
+            <p className="text-white/70 text-lg">
+              Agende sua consulta e converse com a Dra. Erika sobre as melhores opções para você.
+            </p>
+          </div>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="btn-white inline-flex items-center justify-center gap-2 whitespace-nowrap"
           >
-            💬 Agendar Consulta
+            <MessageCircle size={17} /> Agendar Consulta
           </a>
         </div>
       </div>

@@ -67,6 +67,7 @@ export default function Reviews() {
     <section id="reviews" className="py-20 bg-secondary-light">
       <div className="container">
         <div className="text-center mb-16">
+          <p className="eyebrow justify-center flex">Palavras que acolhem</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             O que dizem nossos pacientes
           </h2>
@@ -140,7 +141,7 @@ export default function Reviews() {
               href="https://www.google.com/search?q=dra+erika+goncalves+caruaru"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg bg-primary text-white hover:bg-primary/90 font-semibold transition-all duration-300"
+              className="btn-primary inline-flex items-center justify-center gap-2"
             >
               <ExternalLink size={18} />
               Ver mais avaliações no Google
@@ -149,9 +150,9 @@ export default function Reviews() {
               href="https://www.google.com/search?q=dra+erika+goncalves+caruaru"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-lg border-2 border-primary text-primary hover:bg-primary hover:text-white font-semibold transition-all duration-300"
+              className="btn-secondary inline-flex items-center justify-center gap-2"
             >
-              ⭐ Deixe sua avaliação
+              <Star size={16} /> Deixe sua avaliação
             </a>
           </div>
         </div>

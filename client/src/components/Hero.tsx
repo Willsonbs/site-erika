@@ -1,5 +1,4 @@
-import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
+import { MessageCircle, ArrowRight, ChevronDown } from 'lucide-react';
 import { WHATSAPP_URL } from '@/const';
 
 export default function Hero() {
@@ -11,65 +10,72 @@ export default function Hero() {
   };
 
   return (
-    <section id="home" className="min-h-screen pt-20 flex items-center bg-gradient-to-br from-background via-secondary-light to-background">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
+    <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center overflow-hidden bg-background">
+      {/* Ambient glow, sage-tinted to keep the palette from reading as pure gold+navy */}
+      <div
+        className="absolute -top-24 -right-24 w-[480px] h-[480px] rounded-full blur-3xl pointer-events-none"
+        style={{ background: 'radial-gradient(circle, rgba(110,122,88,0.16), transparent 70%)' }}
+      />
+
+      <div className="container relative grid grid-cols-1 md:grid-cols-[1.05fr_0.95fr] gap-12 md:gap-16 items-center">
         {/* Left Content */}
-        <div className="flex flex-col gap-6 md:gap-8">
-          <div className="space-y-4">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary leading-tight">
-              Cuidar da mente é um ato de coragem e amor próprio.
+        <div className="flex flex-col gap-7">
+          <div>
+            <p className="eyebrow">Psiquiatria em Caruaru, PE</p>
+            <h1 className="text-4xl md:text-5xl lg:text-[3.6rem] font-bold text-primary leading-[1.08] tracking-tight">
+              Cuidar da mente é um ato de{' '}
+              <em className="italic text-secondary" style={{ fontStyle: 'italic' }}>
+                coragem
+              </em>{' '}
+              e amor próprio.
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed mt-5 max-w-lg">
               Atendimento psiquiátrico humanizado, integrando ciência, empatia e cuidado.
             </p>
           </div>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <a
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary text-center"
+              className="btn-primary inline-flex items-center justify-center gap-2"
             >
-              💬 Agendar Consulta via WhatsApp
+              <MessageCircle size={18} /> Agendar Consulta via WhatsApp
             </a>
             <button
               onClick={() => scrollToSection('about')}
-              className="px-6 py-3 rounded-lg font-semibold border-2 border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300"
+              className="btn-secondary inline-flex items-center justify-center gap-2"
             >
-              Conheça a Dra. Erika
+              Conheça a Dra. Erika <ArrowRight size={16} />
             </button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-col sm:flex-row gap-6 pt-4 text-sm">
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-secondary"></div>
-              <span className="text-foreground">CRM 29662</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-secondary"></div>
-              <span className="text-foreground">Psiquiatria</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded-full bg-secondary"></div>
-              <span className="text-foreground">Atendimento Humanizado</span>
-            </div>
+          <div className="flex flex-wrap items-center gap-x-5 gap-y-2 pt-2 text-sm text-foreground/80">
+            <span className="font-medium">CRM-29662/PE</span>
+            <span className="w-1 h-1 rounded-full bg-border" />
+            <span className="font-medium">Psiquiatria</span>
+            <span className="w-1 h-1 rounded-full bg-border" />
+            <span className="font-medium">Atendimento Humanizado</span>
           </div>
         </div>
 
-        {/* Right Image */}
-        <div className="flex justify-center items-center">
-          <div className="relative w-full max-w-md aspect-square">
-            {/* Gradient Background */}
-            <div className="absolute inset-0 bg-gradient-to-br from-secondary/20 to-accent/20 rounded-3xl blur-3xl"></div>
-            
-            {/* Image Container */}
-            <div className="relative w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5 rounded-3xl border border-border overflow-hidden">
+        {/* Right Image — organic arch, the page's signature shape */}
+        <div className="flex justify-center md:justify-end">
+          <div className="relative w-full max-w-sm">
+            <div
+              className="absolute -inset-4 -z-10 opacity-60 blur-2xl"
+              style={{ background: 'linear-gradient(135deg, rgba(159,137,93,0.35), rgba(110,122,88,0.25))', borderRadius: '48% 52% 42% 58% / 55% 45% 55% 45%' }}
+            />
+            <div
+              className="relative w-full aspect-[4/5] overflow-hidden border-4 border-white shadow-xl"
+              style={{ borderRadius: '48% 52% 42% 58% / 58% 42% 58% 42%' }}
+            >
               <img
                 src="/dra-erika-1.jpg"
-                alt="Dra. Erika Gonçalves - Psiquiatra"
+                alt="Dra. Erika Gonçalves - Psiquiatria em Caruaru"
                 className="w-full h-full object-cover object-top"
               />
             </div>
@@ -77,15 +83,14 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-        <button
-          onClick={() => scrollToSection('about')}
-          className="p-2 hover:bg-muted rounded-full transition-colors"
-        >
-          <ChevronDown size={24} className="text-secondary" />
-        </button>
-      </div>
+      {/* Scroll Indicator — static, no bounce */}
+      <button
+        onClick={() => scrollToSection('about')}
+        aria-label="Rolar para a seção Sobre"
+        className="hidden md:flex absolute bottom-8 left-1/2 -translate-x-1/2 p-2 rounded-full hover:bg-muted transition-colors motion-safe:animate-pulse"
+      >
+        <ChevronDown size={22} className="text-secondary" />
+      </button>
     </section>
   );
 }

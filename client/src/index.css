@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&family=Cormorant:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,500;1,600&family=Poppins:wght@300;400;500;600;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -9,6 +9,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+  --color-sage: var(--sage);
+  --color-sage-foreground: var(--sage-foreground);
+  --color-sage-light: var(--sage-light);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -45,27 +48,30 @@
 
 :root {
   /* Paleta de cores da Dra. Erika */
-  --primary: #0b0c2b; /* Azul escuro profundo */
-  --primary-foreground: #ffffff; /* Branco */
-  --secondary: #9f895d; /* Dourado quente */
-  --secondary-foreground: #ffffff; /* Branco */
+  --primary: #0b0c2b; /* Azul escuro profundo — confiança clínica */
+  --primary-foreground: #ffffff;
+  --secondary: #9f895d; /* Dourado quente — assinatura dela, usado em ações */
+  --secondary-foreground: #ffffff;
   --accent: #a08a5d; /* Dourado mais claro */
-  --accent-foreground: #ffffff; /* Branco */
-  
-  --background: #ffffff; /* Branco */
-  --foreground: #0b0c2b; /* Azul escuro */
-  --card: #ffffff; /* Branco */
-  --card-foreground: #0b0c2b; /* Azul escuro */
-  --popover: #ffffff; /* Branco */
-  --popover-foreground: #0b0c2b; /* Azul escuro */
-  --secondary-light: #f5f3f0; /* Bege muito claro */
-  --muted: #e8e5e0; /* Bege claro */
-  --muted-foreground: #6b6b6b; /* Cinza médio */
+  --accent-foreground: #ffffff;
+  --sage: #6e7a58; /* Verde-oliva — calma, cuidado clínico */
+  --sage-foreground: #ffffff;
+  --sage-light: #e4e7da;
+
+  --background: #faf6ef; /* Bege quente muito suave — acolhimento, não clínico-frio */
+  --foreground: #0b0c2b;
+  --card: #ffffff;
+  --card-foreground: #0b0c2b;
+  --popover: #ffffff;
+  --popover-foreground: #0b0c2b;
+  --secondary-light: #f2e9d8; /* Areia — para alternância de seções */
+  --muted: #ede3d0;
+  --muted-foreground: #6b6558;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: #ffffff;
-  --border: #e8e5e0; /* Bege claro */
-  --input: #f5f3f0; /* Bege muito claro */
-  --ring: #9f895d; /* Dourado */
+  --border: #e3d7bd;
+  --input: #f2e9d8;
+  --ring: #9f895d;
   --sidebar: #ffffff;
   --sidebar-foreground: #0b0c2b;
   --sidebar-primary: #0b0c2b;
@@ -212,19 +218,28 @@
   .gradient-elegant {
     @apply bg-gradient-to-br from-secondary/10 to-accent/5;
   }
-  
-  /* Estilo de botão primário */
+
+  /* Rótulo estrutural: sempre carrega um fato real (especialidade, cidade, categoria) */
+  .eyebrow {
+    @apply inline-block text-xs font-semibold tracking-[0.16em] uppercase text-sage mb-3;
+  }
+
+  /* Botões são sempre pill-shaped: o arredondamento total sinaliza "ação",
+     diferenciando de cards/containers que usam raio menor. */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-7 py-3.5 rounded-full font-semibold transition-all duration-300 shadow-sm hover:shadow-md;
   }
-  
-  /* Estilo de botão secundário */
+
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-white px-7 py-3.5 rounded-full font-semibold transition-all duration-300;
   }
-  
+
+  .btn-white {
+    @apply bg-white text-primary hover:bg-white/90 px-7 py-3.5 rounded-full font-semibold transition-all duration-300;
+  }
+
   /* Estilo de card elegante */
   .card-elegant {
-    @apply bg-card text-card-foreground rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
+    @apply bg-card text-card-foreground rounded-2xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
   }
 }

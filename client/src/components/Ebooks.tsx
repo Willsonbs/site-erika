@@ -92,6 +92,7 @@ export default function Ebooks() {
     <section id="ebooks" className="py-20 bg-background">
       <div className="container">
         <div className="text-center mb-16">
+          <p className="eyebrow justify-center flex">Conteúdo para você</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Conteúdos Gratuitos
           </h2>
@@ -123,7 +124,7 @@ export default function Ebooks() {
                   </div>
                   <button
                     onClick={() => handleDownload(ebook)}
-                    className="w-full bg-secondary text-white hover:bg-secondary/90 px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                    className="w-full bg-secondary text-white hover:bg-secondary/90 px-4 py-2.5 rounded-full font-semibold transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Download size={18} />
                     Baixar E-book
@@ -207,13 +208,13 @@ export default function Ebooks() {
               <button
                 type="button"
                 onClick={() => setIsDialogOpen(false)}
-                className="flex-1 px-4 py-2 rounded-lg border border-border text-foreground hover:bg-muted transition-colors"
+                className="flex-1 px-4 py-2 rounded-full border border-border text-foreground hover:bg-muted transition-colors"
               >
                 Cancelar
               </button>
               <button
                 type="submit"
-                className="flex-1 btn-secondary"
+                className="flex-1 btn-primary"
               >
                 Baixar Agora
               </button>

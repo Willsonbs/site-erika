@@ -19,6 +19,7 @@ export default function Header() {
     { label: 'Tratamentos', id: 'treatments' },
     { label: 'E-books', id: 'ebooks' },
     { label: 'Avaliações', id: 'reviews' },
+    { label: 'Dúvidas', id: 'faq' },
     { label: 'Contato', id: 'contact' },
   ];
 
@@ -57,7 +58,7 @@ export default function Header() {
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-secondary text-sm px-5 py-2"
+            className="btn-primary text-sm px-5 py-2.5"
           >
             Agendar Consulta
           </a>
@@ -89,7 +90,7 @@ export default function Header() {
               href={WHATSAPP_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-secondary w-full text-center"
+              className="btn-primary w-full text-center"
             >
               Agendar Consulta
             </a>

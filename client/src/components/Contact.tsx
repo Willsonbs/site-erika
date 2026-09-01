@@ -50,6 +50,7 @@ export default function Contact() {
     <section id="contact" className="py-20 bg-secondary-light">
       <div className="container">
         <div className="text-center mb-16">
+          <p className="eyebrow justify-center flex">Seu próximo capítulo</p>
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-4">
             Agende sua consulta
           </h2>
@@ -226,7 +227,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-gradient-to-r from-secondary to-secondary/80 hover:from-secondary/90 hover:to-secondary/70 text-white font-semibold py-3 rounded-lg transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-full btn-primary flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <Send size={18} />
                   {isSubmitting ? 'Enviando...' : 'Enviar Mensagem'}
@@ -241,18 +242,20 @@ export default function Contact() {
         </div>
 
         {/* CTA */}
-        <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-8 md:p-12 text-center">
-          <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-            Pronto para cuidar da sua saúde mental?
-          </h3>
-          <p className="text-white/90 mb-6 text-lg">
-            Entre em contato com a Dra. Erika e agende sua consulta hoje mesmo.
-          </p>
+        <div className="bg-primary rounded-[28px] p-8 md:p-12 flex flex-col md:flex-row items-center justify-between gap-6 text-center md:text-left">
+          <div>
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              Pronto para cuidar da sua saúde mental?
+            </h3>
+            <p className="text-white/70 text-lg">
+              Entre em contato com a Dra. Erika e agende sua consulta hoje mesmo.
+            </p>
+          </div>
           <a
             href={WHATSAPP_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
+            className="btn-white whitespace-nowrap"
           >
             Agendar Consulta via WhatsApp
           </a>

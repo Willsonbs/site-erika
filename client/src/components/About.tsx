@@ -8,7 +8,7 @@ export default function About() {
     {
       id: 1,
       title: 'Dra. Erika Gonçalves',
-      subtitle: 'Médica – CRM 29662',
+      subtitle: 'Médica – CRM-29662/PE',
       icon: null,
       content: (
         <div className="space-y-4">
@@ -32,13 +32,13 @@ export default function About() {
       content: (
         <ul className="space-y-4">
           <li className="flex items-start gap-3">
-            <span className="text-secondary text-xl mt-1">•</span>
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
             <span className="text-lg leading-relaxed">
               Graduação em Medicina pela Universidade Tiradentes (UNIT) – Maceió/AL, concluída em 2020.
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-secondary text-xl mt-1">•</span>
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
             <span className="text-lg leading-relaxed">
               Pós-graduação em Psiquiatria Geral pela Universidade São Judas Tadeu – concluída em 2024.
             </span>
@@ -54,19 +54,19 @@ export default function About() {
       content: (
         <ul className="space-y-4">
           <li className="flex items-start gap-3">
-            <span className="text-secondary text-xl mt-1">•</span>
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
             <span className="text-lg leading-relaxed">
               Formação em Neuromodulação e Primeiros Socorros em Neuromodulação pela UNIFESP – São Paulo (2025).
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-secondary text-xl mt-1">•</span>
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
             <span className="text-lg leading-relaxed">
               Pós-graduanda em Neuromodulação pelo Instituto Ricardo Galhardoni (2025–2026).
             </span>
           </li>
           <li className="flex items-start gap-3">
-            <span className="text-secondary text-xl mt-1">•</span>
+            <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
             <span className="text-lg leading-relaxed">
               Pós-graduanda em Neurociências e Transtorno do Espectro Autista (TEA) pelo Dr. Thiago Castro – CTC (2025–2026).
             </span>
@@ -95,7 +95,7 @@ export default function About() {
               'Transtorno do Espectro Autista (TEA)',
             ].map((area, index) => (
               <div key={index} className="flex items-start gap-3">
-                <span className="text-secondary text-xl mt-1">•</span>
+                <span className="mt-2.5 w-1.5 h-1.5 rounded-full bg-sage flex-shrink-0" />
                 <span className="text-lg leading-relaxed">{area}</span>
               </div>
             ))}
@@ -119,17 +119,20 @@ export default function About() {
     <section id="about" className="py-20 bg-background">
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Left - Photo */}
+          {/* Left - Photo, mirrored arch echoes the hero's signature shape */}
           <div className="flex justify-center lg:justify-start">
             <div className="relative w-full max-w-[446px]">
-              {/* Gradient Background */}
-              <div className="absolute inset-0 bg-gradient-to-br from-secondary/30 to-accent/20 rounded-2xl blur-2xl"></div>
-              
-              {/* Image Container */}
-              <div className="relative w-full h-[595px] bg-gradient-to-br from-secondary/10 to-accent/5 rounded-2xl border border-border overflow-hidden">
+              <div
+                className="absolute -inset-4 -z-10 opacity-50 blur-2xl"
+                style={{ background: 'linear-gradient(135deg, rgba(110,122,88,0.3), rgba(159,137,93,0.25))', borderRadius: '52% 48% 58% 42% / 45% 55% 45% 55%' }}
+              />
+              <div
+                className="relative w-full h-[595px] border-4 border-white shadow-xl overflow-hidden"
+                style={{ borderRadius: '52% 48% 58% 42% / 42% 58% 42% 58%' }}
+              >
                 <img
                   src="/dra-erika-about.jpg"
-                  alt="Dra. Erika Gonçalves - Psiquiatra"
+                  alt="Dra. Erika Gonçalves - Psiquiatria em Caruaru"
                   className="w-full h-full object-cover object-top"
                 />
               </div>
