@@ -123,7 +123,7 @@ export default function Ebooks() {
                   </div>
                   <button
                     onClick={() => handleDownload(ebook)}
-                    className="w-full bg-secondary text-white hover:bg-secondary/90 px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Download size={18} />
                     Baixar E-book

@@ -80,7 +80,7 @@ export default function Treatments() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
           >
-            💬 Agendar Consulta
+             Agendar pelo WhatsApp
           </a>
         </div>
       </div>
