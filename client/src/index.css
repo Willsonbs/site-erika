@@ -19,6 +19,7 @@
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary-light: var(--secondary-light);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-accent: var(--accent);
@@ -44,35 +45,33 @@
 }
 
 :root {
-  /* Paleta de cores da Dra. Erika */
-  --primary: #0b0c2b; /* Azul escuro profundo */
-  --primary-foreground: #ffffff; /* Branco */
-  --secondary: #9f895d; /* Dourado quente */
-  --secondary-foreground: #ffffff; /* Branco */
-  --accent: #a08a5d; /* Dourado mais claro */
-  --accent-foreground: #ffffff; /* Branco */
-  
-  --background: #ffffff; /* Branco */
-  --foreground: #0b0c2b; /* Azul escuro */
-  --card: #ffffff; /* Branco */
-  --card-foreground: #0b0c2b; /* Azul escuro */
-  --popover: #ffffff; /* Branco */
-  --popover-foreground: #0b0c2b; /* Azul escuro */
-  --secondary-light: #f5f3f0; /* Bege muito claro */
-  --muted: #e8e5e0; /* Bege claro */
-  --muted-foreground: #6b6b6b; /* Cinza médio */
+  --primary: #0b0c2b;
+  --primary-foreground: #f5f3f0;
+  --secondary: #9f895d;
+  --secondary-foreground: #0b0c2b;
+  --accent: #b9a77f;
+  --accent-foreground: #0b0c2b;
+  --background: #f5f3f0;
+  --foreground: #191b35;
+  --card: #fbfaf7;
+  --card-foreground: #191b35;
+  --popover: #fbfaf7;
+  --popover-foreground: #191b35;
+  --secondary-light: #ebe7df;
+  --muted: #e4dfd7;
+  --muted-foreground: #5f6170;
   --destructive: oklch(0.577 0.245 27.325);
-  --destructive-foreground: #ffffff;
-  --border: #e8e5e0; /* Bege claro */
-  --input: #f5f3f0; /* Bege muito claro */
-  --ring: #9f895d; /* Dourado */
-  --sidebar: #ffffff;
+  --destructive-foreground: #f5f3f0;
+  --border: #d8d1c6;
+  --input: #fbfaf7;
+  --ring: #9f895d;
+  --sidebar: #fbfaf7;
   --sidebar-foreground: #0b0c2b;
   --sidebar-primary: #0b0c2b;
-  --sidebar-primary-foreground: #ffffff;
+  --sidebar-primary-foreground: #f5f3f0;
   --sidebar-accent: #9f895d;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: #e8e5e0;
+  --sidebar-accent-foreground: #0b0c2b;
+  --sidebar-border: #d8d1c6;
   --sidebar-ring: #9f895d;
   --chart-1: #0b0c2b;
   --chart-2: #9f895d;
@@ -84,24 +83,24 @@
 
 .dark {
   --primary: #0b0c2b;
-  --primary-foreground: #ffffff;
+  --primary-foreground: #f5f3f0;
   --secondary: #9f895d;
-  --secondary-foreground: #ffffff;
+  --secondary-foreground: #0b0c2b;
   --accent: #a08a5d;
-  --accent-foreground: #ffffff;
-  --background: #0f1117;
-  --foreground: #e8e5e0;
-  --card: #1a1b2e;
-  --card-foreground: #e8e5e0;
-  --popover: #1a1b2e;
-  --popover-foreground: #e8e5e0;
-  --secondary-light: #2a2b3e;
-  --muted: #3a3b4e;
-  --muted-foreground: #a8a8a8;
+  --accent-foreground: #0b0c2b;
+  --background: #101127;
+  --foreground: #f5f3f0;
+  --card: #191b38;
+  --card-foreground: #f5f3f0;
+  --popover: #191b38;
+  --popover-foreground: #f5f3f0;
+  --secondary-light: #242541;
+  --muted: #30324c;
+  --muted-foreground: #c2bdaf;
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: #ffffff;
-  --border: #3a3b4e;
-  --input: #2a2b3e;
+  --border: #45465e;
+  --input: #242541;
   --ring: #9f895d;
   --sidebar: #1a1b2e;
   --sidebar-foreground: #e8e5e0;
@@ -125,12 +124,23 @@
   
   body {
     @apply bg-background text-foreground;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    text-rendering: optimizeLegibility;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Lora', serif;
     @apply font-bold text-foreground;
+  }
+
+  ::selection {
+    background: #9f895d;
+    color: #0b0c2b;
+  }
+
+  :focus-visible {
+    outline: 3px solid #9f895d;
+    outline-offset: 3px;
   }
   
   h1 {
@@ -215,16 +225,79 @@
   
   /* Estilo de botão primário */
   .btn-primary {
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 rounded-lg font-semibold transition-colors duration-300;
   }
   
   /* Estilo de botão secundário */
   .btn-secondary {
-    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-semibold transition-all duration-300;
+    @apply bg-secondary text-secondary-foreground hover:bg-secondary/90 px-6 py-3 rounded-lg font-semibold transition-colors duration-300;
   }
   
   /* Estilo de card elegante */
   .card-elegant {
     @apply bg-card text-card-foreground rounded-xl p-6 shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .skip-link {
+    position: fixed;
+    left: 1rem;
+    top: -5rem;
+    z-index: 100;
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background: #0b0c2b;
+    color: #f5f3f0;
+    font-size: 0.875rem;
+    font-weight: 600;
+    transition: top 180ms ease;
+  }
+
+  .skip-link:focus {
+    top: 1rem;
+  }
+
+  .hero-wash {
+    background:
+      radial-gradient(circle at 78% 26%, rgba(159, 137, 93, 0.14), transparent 32%),
+      linear-gradient(132deg, #f5f3f0 0%, #f5f3f0 58%, #ebe7df 100%);
+  }
+
+  .hero-portrait-frame {
+    box-shadow: 1.25rem 1.25rem 0 #0b0c2b, 0 1.5rem 3rem rgba(11, 12, 43, 0.14);
+  }
+
+  .eyebrow {
+    color: #806b43;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.17em;
+    line-height: 1.35;
+    text-transform: uppercase;
+  }
+
+  .site-header {
+    background: rgba(245, 243, 240, 0.94);
+    box-shadow: 0 1px 0 rgba(11, 12, 43, 0.08);
+  }
+
+  .mobile-nav-panel {
+    box-shadow: 0 1.5rem 2rem rgba(11, 12, 43, 0.1);
+  }
+
+  @media (max-width: 639px) {
+    .hero-portrait-frame {
+      box-shadow: 0.65rem 0.65rem 0 #0b0c2b, 0 1rem 2rem rgba(11, 12, 43, 0.13);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      scroll-behavior: auto !important;
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 }

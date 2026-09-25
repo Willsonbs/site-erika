@@ -21,7 +21,7 @@ export default function FAQ() {
     },
     {
       question: 'Como agendar uma consulta?',
-      answer: 'Você pode agendar sua consulta através do WhatsApp clicando no botão "Agendar Consulta" ou enviando uma mensagem para (81) 98209-5424. A Dra. Erika responderá com os horários disponíveis.',
+      answer: 'Você pode agendar sua consulta através do WhatsApp clicando no botão "Agendar pelo WhatsApp" ou enviando uma mensagem para (81) 98209-5424. A Dra. Erika responderá com os horários disponíveis.',
     },
     {
       question: 'Qual é o valor da consulta?',
@@ -91,7 +91,7 @@ export default function FAQ() {
             rel="noopener noreferrer"
             className="inline-block bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-all duration-300"
           >
-            💬 Fale Conosco no WhatsApp
+             Agendar pelo WhatsApp
           </a>
         </div>
       </div>
