@@ -17,6 +17,7 @@ export default function Ebooks() {
       subtitle: '5 Estratégias para Gerenciar a Ansiedade',
       description: 'Identifique gatilhos, pratique respiração e mindfulness, e saiba quando buscar ajuda profissional.',
       icon: Brain,
+      cover: '/ebooks/covers/ansiedade.webp',
       file: '/ebooks/ebook_ansiedade.pdf',
     },
     {
@@ -25,6 +26,7 @@ export default function Ebooks() {
       subtitle: 'Como manter foco e produtividade na rotina',
       description: 'Estratégias práticas para melhorar a concentração e organização no dia a dia.',
       icon: Target,
+      cover: '/ebooks/covers/tdah.webp',
       file: '/ebooks/ebook_tdah.pdf',
     },
     {
@@ -33,6 +35,7 @@ export default function Ebooks() {
       subtitle: 'Sinais, sintomas e caminhos para o tratamento',
       description: 'Compreenda os sinais da depressão e conheça as opções de tratamento disponíveis.',
       icon: Heart,
+      cover: '/ebooks/covers/depressao.webp',
       file: '/ebooks/ebook_depressao.pdf',
     },
     {
@@ -41,6 +44,7 @@ export default function Ebooks() {
       subtitle: 'Tecnologia e ciência no cuidado da mente',
       description: 'Descubra como a Estimulação Transcraniana por Corrente Contínua pode ajudar no tratamento de transtornos mentais.',
       icon: Zap,
+      cover: '/ebooks/covers/tdcs.webp',
       file: '/ebooks/ebook_tdcs.pdf',
     },
   ];
@@ -106,28 +110,33 @@ export default function Ebooks() {
             {visibleEbooks.map((ebook, idx) => (
               <Card
                 key={ebook.id}
-                className={`card-elegant border transition-all duration-300 ${
+                className={`relative overflow-hidden border p-0 shadow-md transition-all duration-300 hover:shadow-lg ${
                   idx === 0 ? 'md:scale-105 md:shadow-lg' : 'opacity-75 md:opacity-100'
                 }`}
               >
-                <div className="flex flex-col gap-4 h-full">
-                  <div className="flex justify-center mb-2">
-                    <div className="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center">
-                      <ebook.icon className="text-secondary" size={40} />
+                <div className="relative flex h-[380px] flex-col justify-end">
+                  <img
+                    src={ebook.cover}
+                    alt=""
+                    aria-hidden="true"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary via-primary/75 to-primary/10" />
+                  <div className="relative z-10 flex flex-col gap-3 p-6">
+                    <div className="flex items-center gap-2">
+                      <ebook.icon className="text-secondary" size={20} />
+                      <p className="text-xs font-semibold uppercase tracking-wide text-secondary">{ebook.subtitle}</p>
                     </div>
+                    <h3 className="text-xl font-bold text-white">{ebook.title}</h3>
+                    <p className="text-sm text-white/80 line-clamp-2">{ebook.description}</p>
+                    <button
+                      onClick={() => handleDownload(ebook)}
+                      className="mt-1 w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
+                    >
+                      <Download size={18} />
+                      Baixar E-book
+                    </button>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-primary mb-1">{ebook.title}</h3>
-                    <p className="text-sm text-secondary font-semibold mb-3">{ebook.subtitle}</p>
-                    <p className="text-sm text-muted-foreground">{ebook.description}</p>
-                  </div>
-                  <button
-                    onClick={() => handleDownload(ebook)}
-                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 px-4 py-2 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-                  >
-                    <Download size={18} />
-                    Baixar E-book
-                  </button>
                 </div>
               </Card>
             ))}
