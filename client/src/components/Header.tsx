@@ -33,7 +33,7 @@ export default function Header() {
           />
           <div className="min-w-0">
             <p className="truncate font-serif text-sm font-bold leading-tight text-primary sm:text-base">Dra. Erika Gonçalves</p>
-            <p className="text-[0.68rem] uppercase tracking-[0.14em] text-muted-foreground">Psiquiatria</p>
+            <p className="text-[0.68rem] uppercase tracking-[0.14em] text-muted-foreground">Saúde Mental</p>
           </div>
         </div>
 

@@ -44,7 +44,7 @@ export default function Treatments() {
             Tratamentos Especializados
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Oferecemos atendimento especializado em diversas áreas da psiquiatria, sempre com foco no cuidado humanizado e personalizado.
+            Oferecemos atendimento especializado em diversas áreas da saúde mental, sempre com foco no cuidado humanizado e personalizado.
           </p>
         </div>
 

@@ -13,7 +13,7 @@ export default function FAQ() {
     },
     {
       question: 'Como funciona o tratamento?',
-      answer: 'O tratamento é personalizado de acordo com suas necessidades. A Dra. Erika realiza uma avaliação completa e propõe um plano de tratamento que pode incluir acompanhamento psiquiátrico, medicação quando necessária, e orientações para o cuidado emocional.',
+      answer: 'O tratamento é personalizado de acordo com suas necessidades. A Dra. Erika realiza uma avaliação completa e propõe um plano de tratamento que pode incluir acompanhamento em saúde mental, medicação quando necessária, e orientações para o cuidado emocional.',
     },
     {
       question: 'Qual é a duração de uma consulta?',

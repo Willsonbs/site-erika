@@ -82,7 +82,7 @@ export default function About() {
       content: (
         <div className="space-y-4">
           <p className="text-lg leading-relaxed">
-            Atendimento clínico-psiquiátrico de adolescentes (a partir dos 12 anos), adultos e idosos, com foco no diagnóstico e tratamento de:
+            Atendimento clínico em saúde mental de adolescentes (a partir dos 12 anos), adultos e idosos, com foco no diagnóstico e tratamento de:
           </p>
           <div className="grid grid-cols-1 gap-3">
             {[

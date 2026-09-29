@@ -11,7 +11,7 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-bold mb-4">Clínica Dra. Erika Gonçalves</h3>
             <p className="text-white/80 leading-relaxed">
-              Psiquiatria e saúde mental com foco em atendimento humanizado, integrando ciência, empatia e cuidado.
+              Cuidado em saúde mental com foco em atendimento humanizado, integrando ciência, empatia e cuidado.
             </p>
           </div>
 

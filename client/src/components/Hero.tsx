@@ -14,12 +14,12 @@ export default function Hero() {
       <div className="container grid grid-cols-1 items-center gap-12 lg:grid-cols-[minmax(0,0.95fr)_minmax(360px,0.8fr)] lg:gap-20">
         <div className="order-1 flex flex-col gap-7 lg:order-1">
           <div className="space-y-5">
-            <p className="eyebrow">Psiquiatria em Caruaru e online</p>
+            <p className="eyebrow">Saúde Mental em Caruaru e online</p>
             <h1 className="max-w-3xl text-4xl font-bold leading-[1.08] text-primary sm:text-5xl lg:text-[4.35rem]">
               Cuidar da mente é um ato de coragem e amor próprio.
             </h1>
             <p className="max-w-xl text-base leading-8 text-muted-foreground sm:text-lg">
-              Atendimento psiquiátrico humanizado, integrando ciência, empatia e cuidado.
+              Atendimento humanizado em saúde mental, integrando ciência, empatia e cuidado.
             </p>
           </div>
 
@@ -64,12 +64,12 @@ export default function Hero() {
             <div className="hero-portrait-frame relative aspect-[0.83] overflow-hidden rounded-[2rem] border border-primary/10 bg-secondary-light">
               <img
                 src="/dra-erika-1.jpg"
-                alt="Dra. Erika Gonçalves, psiquiatra"
+                alt="Dra. Erika Gonçalves"
                 className="h-full w-full object-cover object-top"
               />
               <div className="absolute inset-x-4 bottom-4 rounded-xl border border-white/40 bg-primary/90 px-4 py-3 text-primary-foreground backdrop-blur-sm sm:inset-x-6 sm:bottom-6">
                 <p className="font-serif text-lg">Dra. Erika Gonçalves</p>
-                <p className="mt-0.5 text-xs tracking-wide text-primary-foreground/75">Psiquiatria · CRM 29662</p>
+                <p className="mt-0.5 text-xs tracking-wide text-primary-foreground/75">Saúde Mental · CRM 29662</p>
               </div>
             </div>
           </div>
