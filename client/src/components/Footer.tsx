@@ -38,7 +38,7 @@ export default function Footer() {
                   rel="noopener noreferrer"
                   className="hover:text-white/80 transition-colors text-sm"
                 >
-                  On Life Consultórios<br />
+                  Move Consultórios<br />
                   Rua Padre Antônio Tomaz, 91<br />
                   Maurício de Nassau, Caruaru - PE
                 </a>

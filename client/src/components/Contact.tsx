@@ -98,7 +98,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="text-secondary hover:text-secondary/80 font-semibold transition-colors"
                   >
-                    On Life Consultórios
+                    Move Consultórios
                   </a>
                   <p className="text-sm text-muted-foreground mt-1">
                     Rua Padre Antônio Tomaz, 91
