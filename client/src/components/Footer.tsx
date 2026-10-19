@@ -9,7 +9,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* About */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Clínica Dra. Erika Gonçalves</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Clínica Dra. Erika Gonçalves</h3>
             <p className="text-white/80 leading-relaxed">
               Cuidado em saúde mental com foco em atendimento humanizado, integrando ciência, empatia e cuidado.
             </p>
@@ -17,7 +17,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contato</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Contato</h3>
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Phone size={18} />
@@ -48,7 +48,7 @@ export default function Footer() {
 
           {/* Hours & Social */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Horário e Redes</h3>
+            <h3 className="text-lg font-bold mb-4 text-white">Horário e Redes</h3>
             <p className="text-white/80 mb-4">
               Segunda a sexta<br />
               08h às 18h
