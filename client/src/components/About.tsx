@@ -62,13 +62,13 @@ export default function About() {
           <li className="flex items-start gap-3">
             <span className="text-secondary text-xl mt-1">•</span>
             <span className="text-lg leading-relaxed">
-              Pós-graduanda em Neuromodulação pelo Instituto Ricardo Galhardoni (2025–2026).
+              Pós-graduação em Neuromodulação pelo Instituto Ricardo Galhardoni – concluída em 2026.
             </span>
           </li>
           <li className="flex items-start gap-3">
             <span className="text-secondary text-xl mt-1">•</span>
             <span className="text-lg leading-relaxed">
-              Pós-graduanda em Neurociências e Transtorno do Espectro Autista (TEA) pelo Dr. Thiago Castro – CTC (2025–2026).
+              Pós-graduação em Neurociências e Transtorno do Espectro Autista (TEA) pelo Dr. Thiago Castro – CTC, concluída em 2026.
             </span>
           </li>
         </ul>
